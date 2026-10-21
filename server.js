@@ -27,9 +27,8 @@ async function initDB() {
       fecha_uso DATETIME
     );
   `);
+  console.log('Base de datos inicializada correctamente');
 }
-
-initDB();
 
 const SECCIONES = [
   { id: 1, premio: "$300 pesos", esPremio: true, color: "#FF4D4D" },
@@ -50,6 +49,23 @@ const PREMIOS_CONFIG = [
   { premio: "Bono de $20 pesos",  cantidad: 25 },
   { premio: "Suerte para la próxima", cantidad: 67 }
 ];
+
+// Función principal para iniciar la base de datos y levantar el servidor ordenadamente
+async function main() {
+  try {
+    await initDB();
+
+    const PORT = process.env.PORT || 3001;
+    app.listen(PORT, () => {
+      console.log(`Servidor Backend corriendo en el puerto ${PORT}`);
+    });
+  } catch (error) {
+    console.error('Error al iniciar la aplicación:', error);
+    process.exit(1);
+  }
+}
+
+main();
 
 function generarCodigo5() {
   const caracteres = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
