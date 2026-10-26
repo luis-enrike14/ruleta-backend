@@ -32,8 +32,8 @@ async function initDB() {
 
 const SECCIONES = [
   { id: 1, premio: "$300 pesos", esPremio: true, color: "#FF4D4D" },
-  { id: 2, premio: "$150 pesos", esPremio: true, color: "#4DA6FF" },
-  { id: 3, premio: "$100 pesos", esPremio: true, color: "#FFD700" },
+  { id: 2, premio: "$250 pesos", esPremio: true, color: "#4DA6FF" },
+  { id: 3, premio: "$150 pesos", esPremio: true, color: "#FFD700" },
   { id: 4, premio: "$50 pesos",  esPremio: true, color: "#4DFF88" },
   { id: 5, premio: "Bono de $20 pesos",  esPremio: true, color: "#9b59b6" },
   { id: 6, premio: "1 Giro Extra", esPremio: false, esGiroExtra: true, color: "#ff8c00" },
@@ -43,11 +43,11 @@ const SECCIONES = [
 
 const PREMIOS_CONFIG = [
   { premio: "$300 pesos", cantidad: 1 },
+  { premio: "$250 pesos", cantidad: 1 },
   { premio: "$150 pesos", cantidad: 1 },
-  { premio: "$100 pesos", cantidad: 1 },
   { premio: "$50 pesos",  cantidad: 4 },
-  { premio: "Bono de $20 pesos",  cantidad: 25 },
-  { premio: "Suerte para la próxima", cantidad: 67 }
+  { premio: "Bono de $20 pesos",  cantidad: 30 },
+  { premio: "Suerte para la próxima", cantidad: 63 }
 ];
 
 // Función principal para iniciar la base de datos y levantar el servidor ordenadamente
