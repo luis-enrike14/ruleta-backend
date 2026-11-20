@@ -16,8 +16,9 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.6",
-    "dotenv": "^18.0.5",
+    "dotenv": "^18.0.10",
     "express": "^5.2.1",
+    "pg": "^8.23.1",
     "sqlite": "^5.1.1",
     "sqlite3": "5.1.7"
   },
